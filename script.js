@@ -1,7 +1,7 @@
 //puxar dados
 //transformar dados em html
 
-fetch('/data.json').then((request) => {  
+fetch('data.json').then((request) => {  
     if(!request.ok) {
       console.log('Oops! Something went wrong.');
       return null;
@@ -9,9 +9,6 @@ fetch('/data.json').then((request) => {
     
     return request.json();
   }).then((data) => {
-    console.log(data);
-    console.log(data[0].timeframes);
-
     // Função para atualizar o conteúdo dos cards
     function updateCards(timeframe) {
         data.forEach(activity => {
